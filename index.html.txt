@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolefy - تحدث الإنجليزية بطلاقة</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+        }
+        .logo {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            background: linear-gradient(to left, #e94560, #f5c518);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            color: #d0d0ff;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        .screenshots {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        .screenshots img {
+            width: 150px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+        .screenshots img:hover {
+            transform: scale(1.08);
+        }
+        .download-section {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            text-decoration: none;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            box-shadow: 0 8px 20px rgba(233,69,96,0.4);
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .download-btn:hover {
+            background: #c23152;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(233,69,96,0.6);
+        }
+        .download-count {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+        .download-count span {
+            font-weight: bold;
+            color: #f5c518;
+            font-size: 1.3rem;
+        }
+        .features {
+            text-align: right;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        .features h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #f5c518;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        .feature-icon {
+            font-size: 1.8rem;
+            margin-left: 15px;
+            width: 40px;
+            text-align: center;
+        }
+        footer {
+            margin-top: auto;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        a {
+            color: #f5c518;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo">Rolefy</h1>
+        <p class="tagline">
+            أداة ثورية لمتعلمي الإنجليزية باستخدام الفيديوهات.<br>
+            أنشئ بطاقات تعليمية، تدرب على النطق، وراجع أخطاءك بذكاء.
+        </p>
+
+        <div class="screenshots">
+            <img src="screenshots/screen1.png" alt="لقطة شاشة 1">
+            <img src="screenshots/screen2.png" alt="لقطة شاشة 2">
+            <img src="screenshots/screen3.png" alt="لقطة شاشة 3">
+            <img src="screenshots/screen4.png" alt="لقطة شاشة 4">
+            <img src="screenshots/screen5.png" alt="لقطة شاشة 5">
+            <img src="screenshots/screen6.png" alt="لقطة شاشة 6">
+            <img src="screenshots/screen7.png" alt="لقطة شاشة 7">
+            <img src="screenshots/screen8.png" alt="لقطة شاشة 8">
+            <img src="screenshots/screen9.png" alt="لقطة شاشة 9">
+            <img src="screenshots/screen10.png" alt="لقطة شاشة 10">
+            <img src="screenshots/screen11.png" alt="لقطة شاشة 11">
+        </div>
+
+        <div class="download-section">
+            <h2 style="margin-bottom:20px; color:#f5c518;">حمل الآن مجاناً</h2>
+            <a id="downloadBtn" class="download-btn" href="#" download>
+                ⬇️ تحميل لأندرويد (APK)
+            </a>
+            <div class="download-count">
+                📊 عدد التحميلات: <span id="downloadCounter">--</span>
+            </div>
+        </div>
+
+        <div class="features">
+            <h2>✨ الميزات</h2>
+            <div class="feature-item"><span class="feature-icon">🎥</span> ترجمة نصوص الفيديو إلى بطاقات تفاعلية</div>
+            <div class="feature-item"><span class="feature-icon">🎤</span> تقييم النطق باستخدام التعرف الصوتي</div>
+            <div class="feature-item"><span class="feature-icon">👤</span> إنشاء شخصيات ومراجعة الحوارات</div>
+            <div class="feature-item"><span class="feature-icon">📈</span> سجل مراجعة ذكي وتنبيهات</div>
+        </div>
+
+        <footer>
+            <p>© 2025 Rolefy. جميع الحقوق محفوظة.</p>
+        </footer>
+    </div>
+
+    <script>
+        // === رابط تحميل APK الخاص بك ===
+        const APK_URL = "https://github.com/mfoad2058-star/rolefy-landing/releases/download/v1.0/app-release.apk";
+
+        // === إعدادات العداد ===
+        const NAMESPACE = "rolefy-app";
+        const KEY = "downloads";
+
+        const COUNTER_API = `https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`;
+        const downloadBtn = document.getElementById('downloadBtn');
+        const downloadCounter = document.getElementById('downloadCounter');
+
+        // ربط الزر برابط التحميل
+        downloadBtn.href = APK_URL;
+
+        // جلب العدد الحالي
+        async function fetchCount() {
+            try {
+                const response = await fetch(`https://api.countapi.xyz/get/${NAMESPACE}/${KEY}`);
+                const data = await response.json();
+                if (data && data.value !== undefined) {
+                    downloadCounter.textContent = data.value;
+                } else {
+                    downloadCounter.textContent = '0';
+                }
+            } catch (err) {
+                downloadCounter.textContent = '...';
+            }
+        }
+
+        // زيادة العداد عند النقر على التحميل
+        downloadBtn.addEventListener('click', async () => {
+            try {
+                const response = await fetch(COUNTER_API);
+                const data = await response.json();
+                if (data && data.value !== undefined) {
+                    downloadCounter.textContent = data.value;
+                }
+            } catch (err) {
+                // حتى لو فشل العداد، التحميل سيستمر
+            }
+        });
+
+        // عرض العدد عند تحميل الصفحة
+        fetchCount();
+    </script>
+</body>
+</html>
